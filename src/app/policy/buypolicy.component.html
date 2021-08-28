@@ -1,0 +1,48 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" id="tourpackages-carousel">
+    <div class="row">
+        <br><br><br>
+
+        <div class="col-lg-12">
+            <div class="col-lg-8">
+                <br>
+                <div class="row">
+                    <div class="col-md-10">
+                        <input class="search-query form-control" placeholder="Search Policy" type="text">
+                    </div>
+                    <div class="col-md-2" style="padding-left: 0%;">
+                        <span class="input-group-btn">
+                            <button class="btn btn-danger" type="button"> <span
+                                    class=" glyphicon glyphicon-search"></span> </button>
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor="let policies of policy">
+            <div class="thumbnail" >
+                <div class="caption" >
+                    <div class='col-lg-12'>
+                        <span class=""></span>
+
+                    </div>
+                    <div class='col-lg-12 well well-add-card'>
+                        <h4>{{policies.policytype}}</h4>
+                    </div>
+                    <div class='col-lg-12'>
+                        <p >Policy Name: <span>{{policies.policyname}}</span></p>
+                        <p>Duration: <span>{{policies.policyduration}}</span> Years</p>
+                        <p>Amount: Rs. <span>{{policies.policyamount}}</span></p>
+                        <p>Description: <span>{{policies.policydescription}}</span></p>
+                    </div>
+                    <button type="button" (click)="buyPolicy(policies)" class="btn btn-primary btn-xs btn-update btn-add-card">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End row -->
+</div><!-- End container -->

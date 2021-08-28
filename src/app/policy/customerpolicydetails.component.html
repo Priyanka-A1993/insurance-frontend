@@ -1,0 +1,31 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" id="tourpackages-carousel">
+    <div class="row">
+        <br><br><br>
+
+        <div class="col-lg-12">
+            <div class="col-lg-8">
+                <br>
+                <br>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" *ngFor="let policy of customerpurchasepolicy">
+            <div class="thumbnail" >
+                <div class="caption" >
+                    <div class='col-lg-12 well well-add-card'>
+                        <h4>{{policy.policytype}}</h4>
+                    </div>
+                    <div class='col-lg-12 thumbnail'>
+                        <p >Policy Name: <span>{{policy.policyname}}</span></p>
+                        <p>Duration: <span>{{policy.policyduration}}</span> Years</p>
+                        <p>Amount: Rs. <span>{{policy.policyamount}}</span></p>
+                        <p>Description: <span>{{policy.policydescription}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End row -->
+</div><!-- End container -->
